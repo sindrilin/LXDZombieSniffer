@@ -121,7 +121,7 @@
 #pragma mark - Private
 - (void)_throwMessageSentExceptionWithSelector: (SEL)selector
 {
-    @throw [NSException exceptionWithName:NSInternalInconsistencyException reason:[NSString stringWithFormat:@"An Objective-C message (-[%@ %@]) was sent to a deallocated object (zombie) at address: %p", NSStringFromClass(self.originClass), NSStringFromSelector(selector), self] userInfo:nil];
+    @throw [NSException exceptionWithName:NSInternalInconsistencyException reason:[NSString stringWithFormat:@"(-[%@ %@]) was sent to a zombie object at address: %p", NSStringFromClass(self.originClass), NSStringFromSelector(selector), self] userInfo:nil];
 }
 
 
