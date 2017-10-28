@@ -14,6 +14,8 @@
 		EFB00CF41FA4607D00527958 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFB00CF21FA4607D00527958 /* LaunchScreen.storyboard */; };
 		EFB00CF71FA4607D00527958 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EFB00CF61FA4607D00527958 /* main.m */; };
 		EFB00D011FA4607D00527958 /* LXDZombieSnifferTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EFB00D001FA4607D00527958 /* LXDZombieSnifferTests.m */; };
+		EFB00D121FA460F800527958 /* LXDZombieProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = EFB00D0E1FA4608900527958 /* LXDZombieProxy.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		EFB00D131FA460F800527958 /* LXDZombieSniffer.m in Sources */ = {isa = PBXBuildFile; fileRef = EFB00D111FA4608900527958 /* LXDZombieSniffer.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +42,10 @@
 		EFB00CFC1FA4607D00527958 /* LXDZombieSnifferTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LXDZombieSnifferTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFB00D001FA4607D00527958 /* LXDZombieSnifferTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LXDZombieSnifferTests.m; sourceTree = "<group>"; };
 		EFB00D021FA4607D00527958 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EFB00D0D1FA4608900527958 /* LXDZombieProxy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LXDZombieProxy.h; sourceTree = "<group>"; };
+		EFB00D0E1FA4608900527958 /* LXDZombieProxy.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LXDZombieProxy.m; sourceTree = "<group>"; };
+		EFB00D101FA4608900527958 /* LXDZombieSniffer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LXDZombieSniffer.h; sourceTree = "<group>"; };
+		EFB00D111FA4608900527958 /* LXDZombieSniffer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LXDZombieSniffer.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +87,7 @@
 		EFB00CE61FA4607D00527958 /* LXDZombieSniffer */ = {
 			isa = PBXGroup;
 			children = (
+				EFB00D0B1FA4608900527958 /* LXDZombieSniffer */,
 				EFB00CE71FA4607D00527958 /* AppDelegate.h */,
 				EFB00CE81FA4607D00527958 /* AppDelegate.m */,
 				EFB00CEA1FA4607D00527958 /* ViewController.h */,
@@ -101,6 +108,33 @@
 				EFB00D021FA4607D00527958 /* Info.plist */,
 			);
 			path = LXDZombieSnifferTests;
+			sourceTree = "<group>";
+		};
+		EFB00D0B1FA4608900527958 /* LXDZombieSniffer */ = {
+			isa = PBXGroup;
+			children = (
+				EFB00D0C1FA4608900527958 /* proxy */,
+				EFB00D0F1FA4608900527958 /* sniffer */,
+			);
+			path = LXDZombieSniffer;
+			sourceTree = "<group>";
+		};
+		EFB00D0C1FA4608900527958 /* proxy */ = {
+			isa = PBXGroup;
+			children = (
+				EFB00D0D1FA4608900527958 /* LXDZombieProxy.h */,
+				EFB00D0E1FA4608900527958 /* LXDZombieProxy.m */,
+			);
+			path = proxy;
+			sourceTree = "<group>";
+		};
+		EFB00D0F1FA4608900527958 /* sniffer */ = {
+			isa = PBXGroup;
+			children = (
+				EFB00D101FA4608900527958 /* LXDZombieSniffer.h */,
+				EFB00D111FA4608900527958 /* LXDZombieSniffer.m */,
+			);
+			path = sniffer;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -205,6 +239,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EFB00D121FA460F800527958 /* LXDZombieProxy.m in Sources */,
+				EFB00D131FA460F800527958 /* LXDZombieSniffer.m in Sources */,
 				EFB00CEC1FA4607D00527958 /* ViewController.m in Sources */,
 				EFB00CF71FA4607D00527958 /* main.m in Sources */,
 				EFB00CE91FA4607D00527958 /* AppDelegate.m in Sources */,

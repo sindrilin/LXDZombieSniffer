@@ -7,8 +7,11 @@
 //
 
 #import "ViewController.h"
+#import "LXDZombieSniffer.h"
 
 @interface ViewController ()
+
+@property (nonatomic, assign) id assignObj;
 
 @end
 
@@ -16,13 +19,21 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    id obj = [NSObject new];
+    self.assignObj = obj;
+    
+    [LXDZombieSniffer installSniffer];
 }
 
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+
+- (IBAction)visitZombie: (id)sender {
+    NSLog(@"%@", self.assignObj);
 }
 
 
